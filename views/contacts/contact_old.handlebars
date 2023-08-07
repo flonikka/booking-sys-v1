@@ -1,0 +1,104 @@
+<section class="section-contact">
+  <div class="container center-text">
+    <h2 class="heading-secondary">
+      <br>
+            Let's keep this conversation going.
+          </h2>
+           <p class="contact-description">
+              Do you have any questions or comments? 
+              <br>Don’t hesitate to contact us, we are happy to help you.
+            </p>
+    </section>
+
+<div class="enquiry">
+    <div class="container grid grid--2-cols margin-bottom-md">
+      
+      <div class="card card-body">
+        <h3 class="heading-tertiary"> Enquiry </h3>
+        <form action="/contact" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="John Doe"
+              class="form-control"
+              value="{{name}}"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="helloworld@example.com"
+              class="form-control"
+              value="{{email}}"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="text"
+              name="phone"
+              class="form-control"
+              value="{{phone}}"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select class="form-control" id="subject" name="subject">
+              <option value="">Please select:</option>
+              <option value="Customer Services">Customer Services</option>
+              <option value="Sports facility">Booking facility</option>
+              <option value="Management">Management</option>
+              <option value="Recruit">Recruit</option>
+            </select>
+          </div>
+          {{!  }}
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              type="text"
+              id="message"
+              name="message"
+              class="form-control"
+              rows="3"
+              value="{{message}}"
+            ></textarea>
+          </div>
+
+          <button class="btn btn--form" type="submit">Submit</button>
+
+        </form>
+      </div>
+
+      <div class="card card-body">
+        <h3 class="heading-tertiary"> Location </h3>
+        <div class="googleaddress width:auto">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.0493275461663!2d114.16706847495959!3d22.31397414240025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400c7edce0987%3A0x552b9463b756f95f!2z6ZW355ub5Lit5b-D!5e0!3m2!1sen!2shk!4v1689773618324!5m2!1sen!2shk"
+            width="100%"
+            height="100%"
+            style="border: 0px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <br /><br />
+        <div>
+
+          <ion-icon class="contact-icon" name="location-outline"></ion-icon>
+          <span class="contact-text">7B Sun Shine Centre, 61 - 63 Portland
+            Street, MongKok, Kowloon. (Yau Ma Tei Exit A1) 1 min walk</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  {{! </div> }}

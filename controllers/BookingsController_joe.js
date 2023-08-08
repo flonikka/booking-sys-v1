@@ -1,4 +1,4 @@
-import Booking from "../models/booking.js";
+import Booking from "../models/Booking.js";
 import User from "../models/User.js";
 
 export const getBookings = (req, res) => {

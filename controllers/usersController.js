@@ -109,12 +109,6 @@ export const getLogout = (req, res) => {
     res.redirect("/");
 };
 
-// router.get("users/register", getRegister );
-// router.post("/register", postRegister);
-// router.get("/login", getLogin);
-// router.post("/login", postLogin);
-// router.get("/logout", getLogout);   
-
 export const getProfile = (req, res) => {
     res.render("users/profile", {
         name : res.locals.user.name,

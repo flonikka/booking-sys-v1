@@ -91,7 +91,7 @@ app.get("/contact", (req, res) => {
 });
 //todo = Joe : select calendar days => searchart => booking
 app.get("/calendar", (req, res) => {
-  res.render("Calendar"); //calendar sandbox
+  res.render("calendar"); //calendar sandbox /changed by francis
 });
 app.get("/seatchart", (req, res) => {
   res.render("Seatchart"); //seating plan sandbox

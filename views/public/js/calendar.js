@@ -96,6 +96,7 @@ const renderCalendar = () => {
   }
   currentDateL.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
   daysTagL.innerHTML = liTag;
+
   // currentDateR.innerText = `${months[currMonth]} ${currYear}`;
   // daysTagR.innerHTML = liTag;
 };

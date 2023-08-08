@@ -3,6 +3,7 @@ import contacts from "../models/Contact.js";
 
     export const getRecords = (req, res) => {
         Booking.aggregate([
+  
             {
             '$lookup': {
                 'from': 'users', 
@@ -13,13 +14,15 @@ import contacts from "../models/Contact.js";
             }, 
             {
             '$unwind': {
-                'path': '$bookingsInClass', 
+                'path': '$bookingsInClass',
+                'includeArrayIndex': 'string',
                 'preserveNullAndEmptyArrays': true
             }
             }, 
             {
             '$sort': {
-                'bookingDate': -1,
+                'courseID': -1,
+                'bookingDate': 1,
                 'facility' :1,
                 'session' : 1
             }
@@ -35,6 +38,7 @@ import contacts from "../models/Contact.js";
 
     export const getInquiries = (req, res) => {
         contacts.aggregate([
+
         {
           '$lookup': {
             'from': 'admin', 

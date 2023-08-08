@@ -4,6 +4,7 @@
         <caption>List of all bookings</caption>
         <thread>
             <tr>
+                <th>Course ID</th>
                 <th>Facility</th>
                 <th>Booking Date</th>
                 <th>Session</th>
@@ -15,6 +16,7 @@
         <tbody>
             {{#each records}}
             <tr>
+                <td>{{courseID}}</td>
                 <td>{{facility}}</td>
                 <td>{{bookingDate}}</td>
                 <td>{{session}}</td>

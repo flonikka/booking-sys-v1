@@ -55,25 +55,25 @@ export const getAddBookings = (req, res) => {
         "18:00 - 19:00",
     ];
 
-    let fac_arr = [
-    {facCode: "GF01", fac :"Golf", facImgpath: "./img/5.png" },    
-    {facCode: "RB01", fac :"Rugby", facImgpath: "./img/4.png" },
-    {facCode: "SQ01", fac :"Squash Court 1", facImgpath: "./img/2.png"},
-    {facCode: "SQ02", fac :"Squash Court 2", facImgpath: "./img/2.png"},
-    {facCode: "SQ03", fac :"Squash Court 3", facImgpath: "./img/2.png"},
-    {facCode: "SQ04", fac :"Squash Court 4", facImgpath: "./img/2.png"},
-    {facCode: "TS01", fac :"Tennis Court 1", facImgpath: "./img/1.png"},
-    {facCode: "TS02", fac :"Tennis Court 2", facImgpath: "./img/1.png"},
-    {facCode: "TS03", fac :"Tennis Court 3", facImgpath: "./img/1.png"},   
-    {facCode: "TS04", fac :"Tennis Court 4", facImgpath: "./img/1.png"},
-    {facCode: "TS05", fac :"Tennis Court 5", facImgpath: "./img/1.png"},   
-    {facCode: "TS06", fac :"Tennis Court 6", facImgpath: "./img/1.png"},
-    {facCode: "TS07", fac :"Tennis Court 7", facImgpath: "./img/1.png"},     
-    {facCode: "TT01", fac :"Table Tennis Court 1", facImgpath: "./img/3.png"},
-    {facCode: "TT02", fac :"Table Tennis Court 2", facImgpath: "./img/3.png"},            
-    {facCode: "TT03", fac :"Table Tennis Court 3", facImgpath: "./img/3.png"},
-    {facCode: "TT04", fac :"Table Tennis Court 4", facImgpath: "./img/3.png"},       
-    ];
+    // let fac_arr = [
+    // {facCode: "GF01", fac :"Golf", facImgpath: "./img/5.png"},  
+    // {facCode: "RB01", fac :"Ruby", facImgpath: "./img/4.png"},
+    // {facCode: "SQ01", fac :"Squash Court 1", facImgpath: "./img/2.png"},
+    // {facCode: "SQ02", fac :"Squash Court 2", facImgpath: "./img/2.png"},
+    // {facCode: "SQ03", fac :"Squash Court 3", facImgpath: "./img/2.png"},
+    // {facCode: "SQ04", fac :"Squash Court 4", facImgpath: "./img/2.png"},
+    // {facCode: "TS01", fac :"Tennis Court 1", facImgpath: "./img/1.png"},
+    // {facCode: "TS02", fac :"Tennis Court 2", facImgpath: "./img/1.png"},
+    // {facCode: "TS03", fac :"Tennis Court 3", facImgpath: "./img/1.png"},   
+    // {facCode: "TS04", fac :"Tennis Court 4", facImgpath: "./img/1.png"},
+    // {facCode: "TS05", fac :"Tennis Court 5", facImgpath: "./img/1.png"},   
+    // {facCode: "TS06", fac :"Tennis Court 6", facImgpath: "./img/1.png"},
+    // {facCode: "TS07", fac :"Tennis Court 7", facImgpath: "./img/1.png"},     
+    // {facCode: "TT01", fac :"Table Tennis Court 1", facImgpath: "./img/3.png"},
+    // {facCode: "TT02", fac :"Table Tennis Court 2", facImgpath: "./img/3.png"},            
+    // {facCode: "TT03", fac :"Table Tennis Court 3", facImgpath: "./img/3.png"},
+    // {facCode: "TT04", fac :"Table Tennis Court 4", facImgpath: "./img/3.png"},       
+    // ];
 
     var sessions = [];
     var booked_sessions_aa = [];
@@ -85,10 +85,10 @@ export const getAddBookings = (req, res) => {
         return obj.fac;
     };
 
-    function facility_img (in_fac) {
-        let obj = fac_arr.find(o => o.facCode === in_fac);
-        return obj.facImgpath;
-    };
+    // function facility_img (in_fac) {
+    //     let obj = fac_arr.find(o => o.facCode === in_fac);
+    //     return obj.facImgpath;
+    // };
 
 export const postAddBookings = (req, res) => {
     //* Add *** New function
@@ -157,7 +157,7 @@ export const postAddBookings = (req, res) => {
     //* loop through sessions selected and insert booking record for each session
     {
     
-Booking.findOne ({facility : "GF01",    //GF01
+Booking.findOne ({facility : "GF01", 
     bookingDate : req.body.bookingDate, 
     session : req.body.session_selected_a[q]},function(err, result) {
         if (err) throw err;
@@ -467,7 +467,6 @@ export const putEditBookings= (req, res) => {
 }
 
 export const getRecords = (req, res) => {
-
     Booking.aggregate (
         [
             {
